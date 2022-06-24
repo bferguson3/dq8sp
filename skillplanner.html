@@ -10,23 +10,85 @@
 
         <div class="leftPane">
             <form>
-                HERO
-                <br> Sword <br>
-                <input type="range" min="0" max="100" value="0" class="slider" id="heroSwordSlider" onchange="updateSkillLbl('hsslbl', 'heroSwordSlider', 'herototal')" onmousemove="updateSkillLbl('hsslbl', 'heroSwordSlider', 'herototal')">
-                <label for="heroSwordSlider" id="hsslbl">0</label>
-                <br> Spear <br>
-                <input type="range" min="0" max="100" value="0" class="slider" id="heroSpearSlider" onchange="updateSkillLbl('hpslbl', 'heroSpearSlider', 'herototal')" onmousemove="updateSkillLbl('hpslbl', 'heroSpearSlider', 'herototal')">
-                <label for="heroSpearSlider" id="hpslbl">0</label>
-                <br> Boomerang <br>
-                <input type="range" min="0" max="100" value="0" class="slider" id="heroBoomerangSlider" onchange="updateSkillLbl('hbslbl', 'heroBoomerangSlider', 'herototal')" onmousemove="updateSkillLbl('hbslbl', 'heroBoomerangSlider', 'herototal')">
-                <label for="heroBoomerangSlider" id="hbslbl">0</label>
-                <br> Fists <br>
-                <input type="range" min="0" max="100" value="0" class="slider" id="heroFistsSlider" onchange="updateSkillLbl('hfslbl', 'heroFistsSlider', 'herototal')" onmousemove="updateSkillLbl('hfslbl', 'heroFistsSlider', 'herototal')">
-                <label for="heroFistsSlider" id="hfslbl">0</label>
-                <br> Courage <br>
-                <input type="range" min="0" max="100" value="0" class="slider" id="heroCourageSlider" onchange="updateSkillLbl('hcslbl', 'heroCourageSlider', 'herototal')" onmousemove="updateSkillLbl('hcslbl', 'heroCourageSlider', 'herototal')">
-                <label for="heroCourageSlider" id="hcslbl">0</label>
-                <br> Total SP: <label id="herototal">0</label>
+                <button class="heroBtn" id="herotab" type="button">HERO</button>
+                <button class="heroBtn" id="yangtab" type="button">YANGUS</button>
+                <button class="heroBtn" id="jesstab" type="button">JESSICA</button>
+                <button class="heroBtn" id="kukutab" type="button">KUKURU</button>
+
+                <div id="heroSkillTable" class="skillTable">
+                    <br> Sword <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroSwordSlider" onchange="updateSkillLbl('hsslbl', 'heroSwordSlider', 'herototal')" onmousemove="updateSkillLbl('hsslbl', 'heroSwordSlider', 'herototal')">
+                    <label for="heroSwordSlider" id="hsslbl">0</label>
+                    <br> Spear <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroSpearSlider" onchange="updateSkillLbl('hpslbl', 'heroSpearSlider', 'herototal')" onmousemove="updateSkillLbl('hpslbl', 'heroSpearSlider', 'herototal')">
+                    <label for="heroSpearSlider" id="hpslbl">0</label>
+                    <br> Boomerang <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroBoomerangSlider" onchange="updateSkillLbl('hbslbl', 'heroBoomerangSlider', 'herototal')" onmousemove="updateSkillLbl('hbslbl', 'heroBoomerangSlider', 'herototal')">
+                    <label for="heroBoomerangSlider" id="hbslbl">0</label>
+                    <br> Fists <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroFistsSlider" onchange="updateSkillLbl('hfslbl', 'heroFistsSlider', 'herototal')" onmousemove="updateSkillLbl('hfslbl', 'heroFistsSlider', 'herototal')">
+                    <label for="heroFistsSlider" id="hfslbl">0</label>
+                    <br> Courage <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroCourageSlider" onchange="updateSkillLbl('hcslbl', 'heroCourageSlider', 'herototal')" onmousemove="updateSkillLbl('hcslbl', 'heroCourageSlider', 'herototal')">
+                    <label for="heroCourageSlider" id="hcslbl">0</label>
+                    <br> Total SP: <label id="herototal">0</label>
+                </div>
+                <div id="yangSkillTable" class="skillTable">
+                    <br> Axe <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="yangAxeSlider" onchange="updateSkillLbl('yaslbl', 'yangAxeSlider', 'yangtotal')" onmousemove="updateSkillLbl('yaslbl', 'yangAxeSlider', 'yangtotal')">
+                    <label for="yangAxeSlider" id="yaslbl">0</label>
+                    <br> Club <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="yangClubSlider" onchange="updateSkillLbl('ycslbl', 'yangClubSlider', 'yangtotal')" onmousemove="updateSkillLbl('ycslbl', 'yangClubSlider', 'yangtotal')">
+                    <label for="yangClubSlider" id="ycslbl">0</label>
+                    <br> Scythe <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="yangScytheSlider" onchange="updateSkillLbl('ysslbl', 'yangScytheSlider', 'yangtotal')" onmousemove="updateSkillLbl('ysslbl', 'yangScytheSlider', 'yangtotal')">
+                    <label for="yangScytheSlider" id="ysslbl">0</label>
+                    <br> Fists <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="yangFistsSlider" onchange="updateSkillLbl('yfslbl', 'yangFistsSlider', 'yangtotal')" onmousemove="updateSkillLbl('yfslbl', 'yangFistsSlider', 'yangtotal')">
+                    <label for="yangFistsSlider" id="yfslbl">0</label>
+                    <br> Humanity <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="yangHumanitySlider" onchange="updateSkillLbl('yhslbl', 'yangHumanitySlider', 'yangtotal')" onmousemove="updateSkillLbl('yhslbl', 'yangHumanitySlider', 'yangtotal')">
+                    <label for="yangHumanitySlider" id="yhslbl">0</label>
+                    <br> Total SP: <label id="yangtotal">0</label>
+                </div>
+                <!--
+                <div id="jessSkillTable" class="skillTable">
+                    <br> Sword <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroSwordSlider" onchange="updateSkillLbl('hsslbl', 'heroSwordSlider', 'herototal')" onmousemove="updateSkillLbl('hsslbl', 'heroSwordSlider', 'herototal')">
+                    <label for="heroSwordSlider" id="hsslbl">0</label>
+                    <br> Spear <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroSpearSlider" onchange="updateSkillLbl('hpslbl', 'heroSpearSlider', 'herototal')" onmousemove="updateSkillLbl('hpslbl', 'heroSpearSlider', 'herototal')">
+                    <label for="heroSpearSlider" id="hpslbl">0</label>
+                    <br> Boomerang <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroBoomerangSlider" onchange="updateSkillLbl('hbslbl', 'heroBoomerangSlider', 'herototal')" onmousemove="updateSkillLbl('hbslbl', 'heroBoomerangSlider', 'herototal')">
+                    <label for="heroBoomerangSlider" id="hbslbl">0</label>
+                    <br> Fists <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroFistsSlider" onchange="updateSkillLbl('hfslbl', 'heroFistsSlider', 'herototal')" onmousemove="updateSkillLbl('hfslbl', 'heroFistsSlider', 'herototal')">
+                    <label for="heroFistsSlider" id="hfslbl">0</label>
+                    <br> Courage <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroCourageSlider" onchange="updateSkillLbl('hcslbl', 'heroCourageSlider', 'herototal')" onmousemove="updateSkillLbl('hcslbl', 'heroCourageSlider', 'herototal')">
+                    <label for="heroCourageSlider" id="hcslbl">0</label>
+                    <br> Total SP: <label id="herototal">0</label>
+                </div>
+                <div id="kukuSkillTable" class="skillTable">
+                    <br> Sword <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroSwordSlider" onchange="updateSkillLbl('hsslbl', 'heroSwordSlider', 'herototal')" onmousemove="updateSkillLbl('hsslbl', 'heroSwordSlider', 'herototal')">
+                    <label for="heroSwordSlider" id="hsslbl">0</label>
+                    <br> Spear <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroSpearSlider" onchange="updateSkillLbl('hpslbl', 'heroSpearSlider', 'herototal')" onmousemove="updateSkillLbl('hpslbl', 'heroSpearSlider', 'herototal')">
+                    <label for="heroSpearSlider" id="hpslbl">0</label>
+                    <br> Boomerang <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroBoomerangSlider" onchange="updateSkillLbl('hbslbl', 'heroBoomerangSlider', 'herototal')" onmousemove="updateSkillLbl('hbslbl', 'heroBoomerangSlider', 'herototal')">
+                    <label for="heroBoomerangSlider" id="hbslbl">0</label>
+                    <br> Fists <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroFistsSlider" onchange="updateSkillLbl('hfslbl', 'heroFistsSlider', 'herototal')" onmousemove="updateSkillLbl('hfslbl', 'heroFistsSlider', 'herototal')">
+                    <label for="heroFistsSlider" id="hfslbl">0</label>
+                    <br> Courage <br>
+                    <input type="range" min="0" max="100" value="0" class="slider" id="heroCourageSlider" onchange="updateSkillLbl('hcslbl', 'heroCourageSlider', 'herototal')" onmousemove="updateSkillLbl('hcslbl', 'heroCourageSlider', 'herototal')">
+                    <label for="heroCourageSlider" id="hcslbl">0</label>
+                    <br> Total SP: <label id="herototal">0</label>
+                </div>
+                -->
             </form>
         </div>
 
@@ -45,9 +107,44 @@
     console.log(a);
 
     let heroSkillPoints = [17, 46, 54, 72, 47, 21, 18, 28, 26, 21];
-    let yangusSkillPoints = [30, 57, 43, 72, 40, 15, 18, 35, 20, 20];
+    let yangSkillPoints = [30, 57, 43, 72, 40, 15, 18, 35, 20, 20];
     let jessicaSkillPoints = [9, 58, 60, 80, 37, 14, 17, 21, 30, 24];
     let kukuruSkillPoints = [0, 33, 44, 72, 71, 33, 21, 26, 24, 26];
+
+    document.getElementById("herotab").onclick = function() {
+        document.getElementsByClassName("skillTable")[0].style.display = "block";
+        document.getElementsByClassName("skillTable")[1].style.display = "none";
+        //document.getElementsByClassName("skillTable")[0].style.display = "block";
+        //document.getElementsByClassName("skillTable")[0].style.display = "block";
+        updateSkillLbl('hsslbl', 'heroSwordSlider', 'herototal');
+    }
+    document.getElementById("yangtab").onclick = function() {
+        document.getElementsByClassName("skillTable")[0].style.display = "none";
+        document.getElementsByClassName("skillTable")[1].style.display = "block";
+        //document.getElementsByClassName("skillTable")[0].style.display = "block";
+        //document.getElementsByClassName("skillTable")[0].style.display = "block";
+        updateSkillLbl('yaslbl', 'yangAxeSlider', 'yangtotal')
+    }
+    document.getElementById("jesstab").onclick = function() {
+        document.getElementsByClassName("skillTable")[0].style.display = "none";
+        document.getElementsByClassName("skillTable")[1].style.display = "none";
+        //document.getElementsByClassName("skillTable")[0].style.display = "block";
+        //document.getElementsByClassName("skillTable")[0].style.display = "block";
+        //updateSkillLbl('yaslbl', 'yangAxeSlider', 'yangtotal')
+    }
+    document.getElementById("kukutab").onclick = function() {
+        document.getElementsByClassName("skillTable")[0].style.display = "none";
+        document.getElementsByClassName("skillTable")[1].style.display = "none";
+        //document.getElementsByClassName("skillTable")[0].style.display = "block";
+        //document.getElementsByClassName("skillTable")[0].style.display = "block";
+        //updateSkillLbl('yaslbl', 'yangAxeSlider', 'yangtotal')
+    }
+
+    document.getElementById("herotab").onclick();
+
+    function sn(n) {
+        return "<div class='skillNum'>[" + n + "]</div>"
+    }
 
     function addToSkillList(type, val) {
         let ih = '<b><br>';
@@ -55,113 +152,135 @@
         ih += '</b>';
         if (type == 'SWORD (HERO)') {
             if (val >= 4)
-                ih += "+5 Attack <br>";
+                ih += sn(4) + "+5 Attack <br>";
             if (val >= 9)
-                ih += "Dragon Slash <br>";
+                ih += sn(9) + "Dragon Slash <br>";
             if (val >= 15)
-                ih += "Flame Slash <br>";
+                ih += sn(15) + "Flame Slash <br>";
             if (val >= 22)
-                ih += "+10 Attack <br>";
+                ih += sn(22) + "+10 Attack <br>";
             if (val >= 30)
-                ih += "Metal Slash <br>";
+                ih += sn(30) + "Metal Slash <br>";
             if (val >= 40)
-                ih += "Crit% Up <br>";
+                ih += sn(40) + "Crit% Up <br>";
             if (val >= 52)
-                ih += "Falcon Slash <br>";
+                ih += sn(52) + "Falcon Slash <br>";
             if (val >= 66)
-                ih += "+25 Attack <br>";
+                ih += sn(66) + "+25 Attack <br>";
             if (val >= 82)
-                ih += "Miracle Slash <br>";
+                ih += sn(82) + "Miracle Slash <br>";
             if (val >= 100)
-                ih += "Giga Slash <br>";
+                ih += sn(100) + "Giga Slash <br>";
         }
         if (type == 'SPEAR') {
             if (val >= 3)
-                ih += "+5 Attack <br>";
+                ih += sn(3) + "+5 Attack <br>";
             if (val >= 7)
-                ih += "Mercurial Thrust <br>";
+                ih += sn(7) + "Mercurial Thrust <br>";
             if (val >= 12)
-                ih += "Thunder Thrust <br>";
+                ih += sn(12) + "Thunder Thrust <br>";
             if (val >= 18)
-                ih += "+10 Attack <br>";
+                ih += sn(18) + "+10 Attack <br>";
             if (val >= 25)
-                ih += "Multithrust <br>";
+                ih += sn(25) + "Multithrust <br>";
             if (val >= 34)
-                ih += "Crit% Up <br>";
+                ih += sn(34) + "Crit% Up <br>";
             if (val >= 45)
-                ih += "Clean Sweep <br>";
+                ih += sn(45) + "Clean Sweep <br>";
             if (val >= 59)
-                ih += "Lightning Thrust <br>";
+                ih += sn(59) + "Lightning Thrust <br>";
             if (val >= 77)
-                ih += "+25 Attack <br>";
+                ih += sn(77) + "+25 Attack <br>";
             if (val >= 100)
-                ih += "Lightning Storm <br>";
+                ih += sn(100) + "Lightning Storm <br>";
         }
         if (type == 'BOOMERANG') {
             if (val >= 6)
-                ih += "Crosscutter Throw<br>";
+                ih += sn(6) + "Crosscutter Throw<br>";
             if (val >= 12)
-                ih += "+5 Attack <br>";
+                ih += sn(12) + "+5 Attack <br>";
             if (val >= 18)
-                ih += "Power Throw <br>";
+                ih += sn(18) + "Power Throw <br>";
             if (val >= 25)
-                ih += "+10 Attack <br>";
+                ih += sn(25) + "+10 Attack <br>";
             if (val >= 32)
-                ih += "Firebird Throw <br>";
+                ih += sn(32) + "Firebird Throw <br>";
             if (val >= 40)
-                ih += "+15 Attack <br>";
+                ih += sn(40) + "+15 Attack <br>";
             if (val >= 52)
-                ih += "Super Throw <br>";
+                ih += sn(52) + "Super Throw <br>";
             if (val >= 66)
-                ih += "+20 Attack <br>";
+                ih += sn(66) + "+20 Attack <br>";
             if (val >= 82)
-                ih += "Starburst Throw <br>";
+                ih += sn(82) + "Starburst Throw <br>";
             if (val >= 100)
-                ih += "Gigathrow <br>";
+                ih += sn(100) + "Gigathrow <br>";
         }
         if (type == 'FISTS (HERO)') {
             if (val >= 4)
-                ih += "+5 Attack<br>";
+                ih += sn(4) + "+5 Attack<br>";
             if (val >= 11)
-                ih += "Defending Champ <br>";
+                ih += sn(11) + "Defending Champ <br>";
             if (val >= 17)
-                ih += "Stone Throw <br>";
+                ih += sn(17) + "Stone Throw <br>";
             if (val >= 24)
-                ih += "Knuckle Sandwich <br>";
+                ih += sn(24) + "Knuckle Sandwich <br>";
             if (val >= 33)
-                ih += "+20 Attack <br>";
+                ih += sn(33) + "+20 Attack <br>";
             if (val >= 42)
-                ih += "Thin Air <br>";
+                ih += sn(42) + "Thin Air <br>";
             if (val >= 52)
-                ih += "Crit% Up <br>";
+                ih += sn(52) + "Crit% Up <br>";
             if (val >= 70)
-                ih += "Multifists <br>";
+                ih += sn(70) + "Multifists <br>";
             if (val >= 82)
-                ih += "Boulder Toss <br>";
+                ih += sn(82) + "Boulder Toss <br>";
             if (val >= 100)
-                ih += "+50 Attack <br>";
+                ih += sn(100) + "+50 Attack <br>";
         }
         if (type == 'COURAGE') {
             if (val >= 8)
-                ih += "Zoom<br>";
+                ih += sn(8) + "Zoom<br>";
             if (val >= 16)
-                ih += "Tingle/Kialik <br>";
+                ih += sn(16) + "Tingle/Kialik <br>";
             if (val >= 28)
-                ih += "Holy Protection <br>";
+                ih += sn(28) + "Holy Protection <br>";
             if (val >= 40)
-                ih += "Fizzle/Mahoton <br>";
+                ih += sn(40) + "Fizzle/Mahoton <br>";
             if (val >= 48)
-                ih += "Zap/Dein <br>";
+                ih += sn(48) + "Zap/Dein <br>";
             if (val >= 56)
-                ih += "3/4 MP Usage <br>";
+                ih += sn(56) + "3/4 MP Usage <br>";
             if (val >= 70)
-                ih += "Megante <br>";
+                ih += sn(70) + "Megante <br>";
             if (val >= 82)
-                ih += "Omniheal <br>";
+                ih += sn(82) + "Omniheal <br>";
             if (val >= 90)
-                ih += "1/2 MP Usage <br>";
+                ih += sn(90) + "1/2 MP Usage <br>";
             if (val >= 100)
-                ih += "Gigadein and Gigaslash <br>";
+                ih += sn(100) + "Gigadein and Gigaslash <br>";
+        }
+        if (type == 'AXE') {
+            if (val >= 6)
+                ih += sn(6) + "Helm Splitter<br>";
+            if (val >= 12)
+                ih += sn(12) + "+5 Attack <br>";
+            if (val >= 19)
+                ih += sn(19) + "Hatchet Man <br>";
+            if (val >= 26)
+                ih += sn(26) + "Crit% Up <br>";
+            if (val >= 34)
+                ih += sn(34) + "+10 Attack <br>";
+            if (val >= 42)
+                ih += sn(42) + "Parallax <br>";
+            if (val >= 54)
+                ih += sn(54) + "Axes of Evil <br>";
+            if (val >= 66)
+                ih += sn(66) + "Executioner <br>";
+            if (val >= 82)
+                ih += sn(82) + "+20 Attack <br>";
+            if (val >= 100)
+                ih += sn(100) + "Typhoeus Maul <br>";
         }
         //document.getElementById('skillsList').innerHTML = ih;
         return ih;
@@ -200,7 +319,37 @@
             skillVals.push(crg);
 
             document.getElementById(ctr).innerHTML = to;
-            updatectr(ctr, to);
+            updatectr(ctr, to, heroSkillPoints);
+        } else if (ctr == 'yangtotal') {
+            let to = 0;
+
+            let swd = parseInt(document.getElementById('yaslbl').innerHTML);
+            to += swd;
+            skillTypes.push('AXE');
+            skillVals.push(swd);
+
+            let spr = parseInt(document.getElementById('ycslbl').innerHTML);
+            to += spr;
+            skillTypes.push('CLUB');
+            skillVals.push(spr);
+
+            let boom = parseInt(document.getElementById('ysslbl').innerHTML);
+            to += boom;
+            skillTypes.push('SCYTHE');
+            skillVals.push(boom);
+
+            let fist = parseInt(document.getElementById('yfslbl').innerHTML);
+            to += fist;
+            skillTypes.push('FISTS (YANGUS)');
+            skillVals.push(fist);
+
+            let crg = parseInt(document.getElementById('yhslbl').innerHTML);
+            to += crg;
+            skillTypes.push('HUMANITY');
+            skillVals.push(crg);
+
+            document.getElementById(ctr).innerHTML = to;
+            updatectr(ctr, to, yangSkillPoints);
         }
         document.getElementById('skillsList').innerHTML = ''
         for (let s = 0; s < skillTypes.length; s++) {
@@ -208,11 +357,11 @@
         }
     }
 
-    function updatectr(ctr, to) {
+    function updatectr(ctr, to, charsp) {
         let spr = to;
         let f = 0;
         for (; f < 10; f++) {
-            spr -= heroSkillPoints[f];
+            spr -= charsp[f];
             if (spr <= 0)
                 break;
         }
@@ -231,6 +380,15 @@
 </script>
 
 <style>
+    .skillTable {
+        display: none;
+    }
+    
+    .skillNum {
+        display: inline;
+        font-family: 'Courier New', Courier, monospace;
+    }
+    
     .slider {
         height: 25px;
         width: 75%;
@@ -279,6 +437,16 @@
         top: 100px;
         content: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAAXNSR0IArs4c6QAAABhQTFRFAAAAAAD//wAA/wD/AP8AAP////8A////x+7VIQAAAE9JREFUGJV1j0ESwCAMAoFD///kxiRo7Ew5yQaiAhBbQukAJeIGC4Unn1KiBKUfwG9lAR9PwpFMYU5v0IFR6WvFuRbxVMmZ8k167g+7Hv4F99QB3+lrvWcAAAAASUVORK5CYII=");
         transition: top 2s, left 2s, width 2s
+    }
+    
+    .heroBtn {
+        width: 22%;
+        height: 3em;
+        border-color: grey;
+        border-style: solid;
+        background-color: black;
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
     }
     
     .sprite:hover {
